@@ -26,7 +26,7 @@ body{
     display: block;
     justify-content: center;
     align-content: center;
-    margin: 3em 20em;
+    margin: auto;
     padding: 0.75em 2em;
     border-radius: 20px;
     border: 2.5px solid var(--button-border);
@@ -38,4 +38,8 @@ body{
     border: 0.2px solid var(--button-border);
     border-radius: 10px;
     background: var(--button-color);
+}
+input[type=number]{
+    width: 3rem;
+    style
 }
