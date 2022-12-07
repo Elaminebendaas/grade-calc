@@ -5,7 +5,8 @@ const table = document.getElementById("table")
 addRowBtn.addEventListener('click', newRow)
 
 function newRow(){
-    let newRow = document.createElement('tr')
+    let index = 1
+    let newRow = table.insertRow()
     const nameInput = document.createElement('input')
     const gradeInput = document.createElement('input')
     const weightInput = document.createElement('input')
@@ -19,9 +20,9 @@ function newRow(){
     weightInput.setAttribute('type','number')
 
 
-    table.insertRow()
+
     newRow.append(nameInput)
     newRow.append(gradeInput)
     newRow.append(weightInput)
-
+    index ++
 }
