@@ -16,9 +16,12 @@ function newRow(){
     nameInput.setAttribute('placeholder','e.g Midterm 1')
 
     gradeInput.setAttribute('type', 'number')
+    gradeInput.setAttribute('name', 'grade[]')
+    gradeInput.setAttribute('min','0')
 
     weightInput.setAttribute('type','number')
-
+    weightInput.setAttribute('name', 'weight[]')
+    weightInput.setAttribute('min','0')
 
 
     newRow.append(nameInput)
