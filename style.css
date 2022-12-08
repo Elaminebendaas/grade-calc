@@ -39,6 +39,11 @@ body{
     border-radius: 10px;
     background: var(--button-color);
 }
+.selected-btn{
+    background: #16123f;
+    border: white;
+    color: white;
+}
 input[type=number]{
-    width: 3rem;
+    width: 5.5rem;
 }
