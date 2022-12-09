@@ -47,3 +47,6 @@ body{
 input[type=number]{
     width: 5.5rem;
 }
+input[type=text]{
+    width: 5.5rem;
+}

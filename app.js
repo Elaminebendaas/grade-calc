@@ -14,6 +14,13 @@ let letterGrade = false
 function newRow(){
     let index = 1
     let newRow = table.insertRow()
+    newRow.insertCell()
+    newRow.insertCell()
+    newRow.insertCell()
+    const cellName = newRow.cells[0]
+    const cellGrade = newRow.cells[1]
+    const cellWeight = newRow.cells[2]
+
     const nameInput = document.createElement('input')
     const gradeInput = document.createElement('input')
     const weightInput = document.createElement('input')
@@ -30,10 +37,9 @@ function newRow(){
     weightInput.setAttribute('name', 'weight[]')
     weightInput.setAttribute('min','0')
 
-
-    newRow.append(nameInput)
-    newRow.append(gradeInput)
-    newRow.append(weightInput)
+    cellName.appendChild(nameInput)
+    cellGrade.appendChild(gradeInput)
+    cellWeight.appendChild(weightInput)
     index ++
 }
 
@@ -95,25 +101,26 @@ function lettergradeOutput(array){
     for (let i=0; i<array.length; i++){
         t += array[i]
     }
+    console.log(t)
     if (t<50){
         return percentageGrade.textContent = 'Your final grade is:' + 'F'
-    }else if (50<t<55){
+    }else if (50<t && t<55){
         return percentageGrade.textContent = 'Your final grade is:' + 'D'
-    }else if (55<=t<60){
+    }else if (55<=t && t<60){
         return percentageGrade.textContent = 'Your final grade is:' + 'D+'
-    }else if (60<=t<65){
+    }else if (60<=t&& t<65){
         return percentageGrade.textContent = 'Your final grade is:' + 'C'
-    }else if (65<=t<70){
+    }else if (65<=t && t<70){
         return percentageGrade.textContent = 'Your final grade is:' + 'C+'
-    }else if (70<=t<75){
+    }else if (70<=t && t<75){
         return percentageGrade.textContent = 'Your final grade is:' + 'B'
-    }else if (75<=t<80){
+    }else if (75<=t && t<80){
         return percentageGrade.textContent = 'Your final grade is:' + 'B+'
-    }else if (80<=t<85){
+    }else if (80<=t && t<85){
         return percentageGrade.textContent = 'Your final grade is:' + 'A-'
-    }else if (85<=t<90){
+    }else if (85<=t && t<90){
         return percentageGrade.textContent = 'Your final grade is:' + 'A'
-    }else if (90<=t<=100){
+    }else if (90<=t && t<=100){
         return percentageGrade.textContent = 'Your final grade is:' + 'A+'
     }
 }
